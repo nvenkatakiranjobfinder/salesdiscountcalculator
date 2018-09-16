@@ -13,3 +13,11 @@ mvn -Dtest=SalesApplicationTests test
 Refer to 'ClassDiagram.png'
 
 
+# Key Configuration and Discount calculation approach
+Spring Boot will initialize the properties value starting with "config.****" to "PropertiesResource.java" object.
+DiscountCalculationService.calculateDiscount() will iterate through the SaleItems. Calculate ActualTotalBill and TotalBillBasedOnCustomerType (Refer to CustomerTypesEnum.java).
+Discount % values will be applied based on configuration mentioned in "application.properties".
+
+"SalesApplicationTests" has different methods to test various customer type and Grocery/Non-Grocery types.
+
+
